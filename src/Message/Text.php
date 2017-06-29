@@ -11,7 +11,7 @@ class Text
 			$this->recipientId = $recipientId;
 	}
 	
-	public function message(string $messageText) : array
+	public function message(string $messageText) :array
 	{
 		return [
 		'recipient' =>[
