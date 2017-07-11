@@ -2,7 +2,7 @@
 
 namespace CodeBot\Message;
 
-class Text implements Message
+class Audio implements Message
 {
 	private $recipientId;
 	
@@ -18,8 +18,12 @@ class Text implements Message
 					'id'=>$this->recipientId
 				],
 				"message"=>[
-					'text'=>$messageText,
-					'metadada'=>'DEVELOPER_DEFINED_METADA'
+					'attachment'=>[
+						'type' => 'audio',
+						'payload' =>[
+						   'url' => $messageText
+					    ]
+					
 				]	
 		];
 	}
